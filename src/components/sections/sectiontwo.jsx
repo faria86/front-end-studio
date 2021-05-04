@@ -1,5 +1,5 @@
 import React from 'react';
-import './sectiontwo.css';
+//import './sectiontwo.scss';
 
 function SectionTwo({ id }) {
 

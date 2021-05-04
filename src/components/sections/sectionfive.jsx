@@ -1,11 +1,11 @@
 import React from 'react';
-import './sectionfour.css';
+//import './sectionfive.scss';
 
 function SectionFour({ id }) {
 
   return (
-    <div className="map" id="section4">
-       <h1>Popular Recipes</h1>
+    <div className="map" id="section5">
+       <h1>Collaborate</h1>
     </div>
   );
 }

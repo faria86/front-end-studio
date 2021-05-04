@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './style.css';
+import './style.scss';
 import { Link } from "react-scroll";
 
 export default class Navbar extends Component {
@@ -7,6 +7,7 @@ export default class Navbar extends Component {
     render() {
     return (
       <nav className="navbar" id="navbar">
+        
         <div className="logo">
             <span>LOGO</span>
         </div>

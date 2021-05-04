@@ -1,0 +1,46 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: fixed;
+    align-items: baseline;
+    padding-top: 10px;
+}
+
+.logo span {
+    padding-left: 40px;
+    font-size: 28px;
+}
+
+.sections {
+    flex: 6;
+}
+
+.sections ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.user {
+    flex: 2;
+}
+
+.user ul {
+    padding-right: 40px;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.sections ul li:not(:first-child), 
+.user ul li {
+    padding-left: 35px;
+}
+
+.sections ul li,
+.user ul li {
+    font-size: 18px;
+}
