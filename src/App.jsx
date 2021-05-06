@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import './App.scss';
 
 import NavBar from './components/navbar';
-import SectionOne from './components/sections/sectionone';
-import { MapSection } from './components/sections/mapsection';
-import SectionThree from './components/sections/sectionthree';
-import SectionFour from './components/sections/sectionfour';
-import SectionFive from './components/sections/sectionfive';
+import MapContainer from './components/sections/map/mapContainer';
+import BigPicture from './components/sections/bigPicture';
+import OurMenu from './components/sections/ourMenu';
+import PopularRecipes from './components/sections/popularRecipes';
 
 
 class App extends Component {
@@ -14,20 +13,17 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar/>
-        <SectionOne
+        <BigPicture
           id="section1"
         />
-         <MapSection
-          id="section2"
+         <MapContainer
+          //id="section2"
         />
-        <SectionThree
+        <OurMenu
           id="section3"
         />
-        <SectionFour
+        <PopularRecipes
           id="section4"
-        />
-          <SectionFive
-          id="section5"
         />
       </div>
     );

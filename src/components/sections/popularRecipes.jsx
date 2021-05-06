@@ -1,7 +1,7 @@
 import React from 'react';
-import './sectionfour.scss';
+import './popularRecipes.scss';
 
-function SectionFour({ id }) {
+function PopularRecipes({ id }) {
 
   return (
     <div className="map" id="section4">
@@ -77,4 +77,4 @@ function SectionFour({ id }) {
   );
 }
 
-export default SectionFour;
+export default PopularRecipes;

@@ -1,7 +1,7 @@
 import React from 'react';
-import './sectionthree.scss';
+import './ourMenu.scss';
 
-function SectionThree({ id }) {
+function OurMenu({ id }) {
 
   return (
     
@@ -78,4 +78,4 @@ function SectionThree({ id }) {
   );
 }
 
-export default SectionThree;
+export default OurMenu;
