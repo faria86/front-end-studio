@@ -3,10 +3,11 @@ import './App.scss';
 
 import NavBar from './components/navbar';
 import SectionOne from './components/sections/sectionone';
-import SectionTwo from './components/sections/sectiontwo';
+import { MapSection } from './components/sections/mapsection';
 import SectionThree from './components/sections/sectionthree';
 import SectionFour from './components/sections/sectionfour';
 import SectionFive from './components/sections/sectionfive';
+
 
 class App extends Component {
   render() {
@@ -16,7 +17,7 @@ class App extends Component {
         <SectionOne
           id="section1"
         />
-         <SectionTwo
+         <MapSection
           id="section2"
         />
         <SectionThree
