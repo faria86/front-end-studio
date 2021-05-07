@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './style.scss';
 import { Link } from "react-scroll";
 
+
 export default class Navbar extends Component {
 
     render() {
@@ -29,7 +30,7 @@ export default class Navbar extends Component {
             <li className="nav-item">
               <Link
                 activeClass="active"
-                to="section2"
+                to=""
                 spy={true}
                 smooth={true}
                 offset={-70}

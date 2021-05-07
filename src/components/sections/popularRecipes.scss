@@ -2,3 +2,29 @@
     display: flex;
 }
 
+.card {
+    margin: 0 auto;
+
+    article, h3, p {
+        text-align: left;
+        padding-left: 25px;
+    }
+
+    span {
+        text-align: end;
+    }
+
+    h3 {
+        font-size:large;
+        padding-right: 20px;
+    }
+
+    article {
+        padding-top: 10px;
+    }
+
+    p {
+        padding-right: 20px;
+    }
+
+}

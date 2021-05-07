@@ -9,7 +9,7 @@ function OurMenu({ id }) {
        <h1>OUR MENU</h1>
        <h3>KNOW MORE</h3>
        
-      <div className="columns">
+      <div className="columns-wrapper">
         
         <div className="col1">
           <h1>STARTERS</h1>

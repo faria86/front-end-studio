@@ -1,5 +1,9 @@
-.columns {
+.columns-wrapper {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
+.container1 {
+  padding: 10px 10px 0 10px;
+}
