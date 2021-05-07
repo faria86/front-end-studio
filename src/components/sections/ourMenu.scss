@@ -4,6 +4,11 @@
   flex-wrap: wrap;
 }
 
+.col {
+  flex: 1 0 21%;
+  margin: 5px;
+}
+
 .container1 {
   padding: 10px 10px 0 10px;
 }

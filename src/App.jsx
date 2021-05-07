@@ -13,18 +13,10 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar/>
-        <BigPicture
-          id="section1"
-        />
-         <MapContainer
-          //id="section2"
-        />
-        <OurMenu
-          id="section3"
-        />
-        <PopularRecipes
-          id="section4"
-        />
+        <BigPicture/>
+         <MapContainer/>
+        <OurMenu/>
+        <PopularRecipes/>
       </div>
     );
   }

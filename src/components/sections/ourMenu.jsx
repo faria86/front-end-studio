@@ -1,17 +1,17 @@
 import React from 'react';
 import './ourMenu.scss';
 
-function OurMenu({ id }) {
+function OurMenu() {
 
   return (
     
-    <div className="our-menu" id="section3">
+    <div className="high-margin" id="section-menu">
        <h1>OUR MENU</h1>
        <h3>KNOW MORE</h3>
        
       <div className="columns-wrapper">
         
-        <div className="col1">
+        <div className="col">
           <h1>STARTERS</h1>
           <div className="starter">
             <article>QUINOA CROQUETTAS</article>
@@ -28,7 +28,7 @@ function OurMenu({ id }) {
          </div>
         </div>
 
-        <div className="col2">
+        <div className="col">
           <h1>MAIN COURSES</h1>
           <div className="main">
             <article>EL CLASICO</article>
@@ -41,7 +41,7 @@ function OurMenu({ id }) {
           </div>
         </div>
       
-        <div className="col3">
+        <div className="col">
           <h1>SIDES</h1>
           <div className="side">
             <article>SUPER POLLO</article>
@@ -54,7 +54,7 @@ function OurMenu({ id }) {
           </div>
         </div>
 
-        <div className="col4">
+        <div className="col">
           <h1>DESSERTS</h1>
           <div className="dessert">
             <article>ICE CREAM</article>
