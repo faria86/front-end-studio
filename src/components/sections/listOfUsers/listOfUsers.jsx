@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import SingleUser from './singleUser/singleUser';
 import './listOfUsers.scss';
 
 function ListOfUsers() {
@@ -25,19 +26,11 @@ function ListOfUsers() {
 
 
     return (
-        <div className='users-list'>    
+        <div className='users-list'>       
                 {users.map(item => (
-                    <div className='user-single' key={item.id}>
-                        <h2>{item.name}</h2>
-                        <h3>{item.email}</h3>
-                        <h5>ADDRESS:</h5>
-                        <p>Street: {item.address.street}</p>
-                        <p>City: {item.address.city}</p>
-                        <p>Zip Code: {item.address.zipcode}</p>
-                    </div>
+                    <SingleUser key={item.id} user={item}/>
                 ))}   
         </div>
-        
   );
 };
 
