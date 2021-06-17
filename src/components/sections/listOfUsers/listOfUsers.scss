@@ -1,0 +1,17 @@
+.users-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.user-single {
+    width: 25%;
+    margin: 0 15px 15px 0;
+    flex: 1 0 21%;
+    box-shadow: 8px 15px 30px -30px;
+
+    h3 {
+        color: #767676;
+        opacity: .5;
+    }
+}
