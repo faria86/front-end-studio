@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SingleUser from './singleUser/singleUser';
+import Spinner from '../Spinner/spinner';
+
 import './listOfUsers.scss';
 
 const ListOfUsers = () => {
     const [allUsers, setAllUsers] = useState([]);
     const [searchName, setSearchName] = useState('');
     const [searchResults, setSearchResults] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
   
     // call API to get all users
     const getAllUsers = () => {
@@ -23,6 +26,11 @@ const ListOfUsers = () => {
                     if (mounted) {
                         setAllUsers(data)
                         setSearchResults(data)
+                        const timer = setTimeout(() => {
+                            setIsLoading(false);
+                          }, 5000);
+                          return () => clearTimeout(timer);
+                        
                     }
                 })
         return () => mounted = false;
@@ -55,7 +63,7 @@ const ListOfUsers = () => {
     }
 
 
-    return (
+    return !isLoading ? (
         <div className='user-wrapper'>
             <div className='user-form'>
                 <form>
@@ -75,7 +83,7 @@ const ListOfUsers = () => {
 
             </div>
         </div>
-  );
+  ) : <Spinner/>
 };
 
 export default ListOfUsers;
