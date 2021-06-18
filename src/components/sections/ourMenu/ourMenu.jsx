@@ -1,7 +1,7 @@
 import React from 'react';
 import './ourMenu.scss';
 
-function OurMenu() {
+const OurMenu = () => {
 
   return (
     

@@ -1,7 +1,7 @@
 import React from 'react';
 import './popularRecipes.scss';
 
-function PopularRecipes({ id }) {
+const PopularRecipes = ({ id }) => {
 
   return (
     <div className="high-margin" id="section-recipes">

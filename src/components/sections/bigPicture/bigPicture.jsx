@@ -1,7 +1,7 @@
 import React from 'react';
 import './bigPicture.scss';
 
-function BigPicture() {
+const BigPicture = () => {
   return (
     <div 
     className="food-london" 

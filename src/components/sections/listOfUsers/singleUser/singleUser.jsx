@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function SingleUser({user}) {
+const SingleUser = ({user}) => {
    let [name, setName] = useState(user.name);
 
    function ChangeName() {
@@ -9,7 +9,7 @@ function SingleUser({user}) {
    }
 
    return (
-      <div className='user-single' onClick={ChangeName}>
+      <div className='user-single' onClick={() => ChangeName()}>
          <h3>{name}</h3>
          <h5>{user.email}</h5>
          <p>Address:</p>
