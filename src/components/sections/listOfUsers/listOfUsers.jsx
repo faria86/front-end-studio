@@ -15,7 +15,7 @@ const ListOfUsers = () => {
         .catch(error => console.log('Error getting Users from API', error))
     }
 
-    // user of hook to mount date of all users
+    // hook to mount data with all users
     useEffect(() => {
         let mounted = true;
             getAllUsers()
@@ -28,19 +28,31 @@ const ListOfUsers = () => {
         return () => mounted = false;
     }, []);
 
-   
+   // on change event of input name
     const titleOnChangeHandler = (event) => {
         console.log(event.target.value)
         setSearchName(event.target.value);
     }
 
-    // used hook when search input is changed
+    // hook when search input is changed
     useEffect(() => {
         const results = allUsers.filter(item =>
           item.name.toLowerCase().includes(searchName.toLowerCase())
         );
         setSearchResults(results);
-      }, [searchName]);
+      }, [searchName, allUsers]);
+
+    
+    // change name with click event on child single user
+    const changeNameOnClick = itemId => {
+        var newAllUsers = allUsers.map(item => {
+            if (itemId === item.id) {
+                return {...item, name: 'User deleted' };
+            }
+            return item;
+        })
+        setAllUsers(newAllUsers);
+    }
 
 
     return (
@@ -58,7 +70,7 @@ const ListOfUsers = () => {
             </div>
             <div className='users-list'>       
                     {searchResults.map(item => (
-                        <SingleUser key={item.id} user={item}/>
+                        <SingleUser key={item.id} user={item} changeNameOnClick={changeNameOnClick}/>
                     ))}
 
             </div>

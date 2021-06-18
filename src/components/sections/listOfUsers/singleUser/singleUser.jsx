@@ -1,16 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
-const SingleUser = ({user}) => {
-   let [name, setName] = useState(user.name);
-
-   function ChangeName() {
-      setName('User Deleted');
-      console.log(user.name);
-   }
+const SingleUser = ({ user, changeNameOnClick }) => {
 
    return (
-      <div className='user-single' onClick={() => ChangeName()}>
-         <h3>{name}</h3>
+      <div className='user-single' onClick={() => {changeNameOnClick(user.id)}}>
+         <h3>{user.name}</h3>
          <h5>{user.email}</h5>
          <p>Address:</p>
          <p>Street: {user.address.street}</p>
