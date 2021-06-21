@@ -12,7 +12,7 @@ const ListOfUsers = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [textInput, setTextInput] = useState('')
 
-  
+
     // call API to get all users
     const getAllUsers = () => {
         return axios.get('https://jsonplaceholder.typicode.com/users')
@@ -89,7 +89,7 @@ const ListOfUsers = () => {
                 </form>
             </div>
             <div className='users-list'>       
-                    {searchResults.length === 0 ? (<div>User not found</div>) : searchResults.map(item => (
+                    {!searchResults.length ? (<div>User not found</div>) : searchResults.map(item => (
                         <SingleUser 
                         key={item.id} 
                         user={item} 
