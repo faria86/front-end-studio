@@ -10,6 +10,8 @@ const ListOfUsers = () => {
     const [searchName, setSearchName] = useState('');
     const [searchResults, setSearchResults] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    // const [textInput, setTextInput] = useState('')
+
   
     // call API to get all users
     const getAllUsers = () => {
@@ -38,7 +40,6 @@ const ListOfUsers = () => {
 
    // on change event of input name
     const titleOnChangeHandler = (event) => {
-        console.log(event.target.value)
         setSearchName(event.target.value);
     }
 
@@ -47,7 +48,7 @@ const ListOfUsers = () => {
         const results = allUsers.filter(item =>
           item.name.toLowerCase().includes(searchName.toLowerCase())
         );
-        setSearchResults(results);
+        setSearchResults(results)
       }, [searchName, allUsers]);
 
     
@@ -74,10 +75,14 @@ const ListOfUsers = () => {
                     value={searchName} 
                     onChange={titleOnChangeHandler}>
                     </input>
+                    <input 
+                    type='text' 
+                    placeholder="Search">
+                    </input>
                 </form>
             </div>
             <div className='users-list'>       
-                    {searchResults.map(item => (
+                    {searchResults.length === 0 ? (<div>User not found</div>) : searchResults.map(item => (
                         <SingleUser key={item.id} user={item} changeNameOnClick={changeNameOnClick}/>
                     ))}
 
