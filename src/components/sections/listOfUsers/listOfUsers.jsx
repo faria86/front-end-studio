@@ -10,7 +10,7 @@ const ListOfUsers = () => {
     const [searchName, setSearchName] = useState('');
     const [searchResults, setSearchResults] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    // const [textInput, setTextInput] = useState('')
+    const [textInput, setTextInput] = useState('')
 
   
     // call API to get all users
@@ -43,6 +43,11 @@ const ListOfUsers = () => {
         setSearchName(event.target.value);
     }
 
+    const titleOnChangeInputHandler = (event) => {
+        console.log(event.target.value);
+        setTextInput(event.target.value);
+    }
+
     // hook when search input is changed
     useEffect(() => {
         const results = allUsers.filter(item =>
@@ -56,7 +61,7 @@ const ListOfUsers = () => {
     const changeNameOnClick = itemId => {
         var newAllUsers = allUsers.map(item => {
             if (itemId === item.id) {
-                return {...item, name: 'User deleted' };
+                return {...item, name: textInput.length ? textInput : 'Default name' };
             }
             return item;
         })
@@ -77,13 +82,19 @@ const ListOfUsers = () => {
                     </input>
                     <input 
                     type='text' 
-                    placeholder="Search">
+                    placeholder="Search"
+                    value={textInput} 
+                    onChange={titleOnChangeInputHandler}>
                     </input>
                 </form>
             </div>
             <div className='users-list'>       
                     {searchResults.length === 0 ? (<div>User not found</div>) : searchResults.map(item => (
-                        <SingleUser key={item.id} user={item} changeNameOnClick={changeNameOnClick}/>
+                        <SingleUser 
+                        key={item.id} 
+                        user={item} 
+                        changeNameOnClick={changeNameOnClick} 
+                        />
                     ))}
 
             </div>
