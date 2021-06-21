@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import SingleUser from './singleUser/singleUser';
-import Spinner from '../Spinner/spinner';
+import Spinner from '../../Others/Spinner/spinner';
+import { getAllUsers } from '../../../Utils/usersApi';
 
 import './listOfUsers.scss';
 
@@ -13,13 +13,6 @@ const ListOfUsers = () => {
     const [textInput, setTextInput] = useState('')
 
 
-    // call API to get all users
-    const getAllUsers = () => {
-        return axios.get('https://jsonplaceholder.typicode.com/users')
-        .then(res => res.data)
-        .catch(error => console.log('Error getting Users from API', error))
-    }
-
     // hook to mount data with all users
     useEffect(() => {
         let mounted = true;
@@ -30,9 +23,8 @@ const ListOfUsers = () => {
                         setSearchResults(data)
                         const timer = setTimeout(() => {
                             setIsLoading(false);
-                          }, 5000);
+                          }, 3000);
                           return () => clearTimeout(timer);
-                        
                     }
                 })
         return () => mounted = false;
