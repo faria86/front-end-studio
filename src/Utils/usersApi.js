@@ -9,4 +9,14 @@ export const getAllUsers = () => {
 }
 
 // POST request
- 
+export const createUser = async (user) => {
+   const {data} = await axios.post('https://jsonplaceholder.typicode.com/posts', {
+       title: user.name,
+       body: user.username,
+       userId: user.id
+    })
+    .catch(function(error) {
+       console.log(error);
+    })
+    return data;
+ };

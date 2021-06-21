@@ -1,28 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { createUser } from "../../../../Utils/usersApi";
-import axios from 'axios';
 
 const SingleUser = ({ user, changeNameOnClick}) => {
    let [newUser, setNewUser] = useState({});
 
-   const createUser = () => {
-      axios.post('https://jsonplaceholder.typicode.com/posts', {
-         title: user.name,
-         body: user.username,
-         userId: user.id
-      })
-      .then(function(response) {
-         console.log(response);
-         setNewUser(response.data);
-      })
-      .catch(function(error) {
-         console.log(error);
-      });
-   };
-
-    const handleUserClick = id => {
+    const handleUserClick = async (id) => {
       changeNameOnClick(id);
-      createUser();
+      const responseFromPostApi = await createUser(user)
+	   setNewUser(responseFromPostApi)
     }
 
     // show new user when user has content
