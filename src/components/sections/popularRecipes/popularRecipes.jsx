@@ -4,9 +4,9 @@ import './popularRecipes.scss';
 const PopularRecipes = ({ id }) => {
 
   return (
-    <div className="high-margin" id="section-recipes">
+    <div className="high-margin-recipes" id="section-recipes">
       
-      <div className="title">
+      <div className="title-recipes">
         <div className="title-left">
           <h2>POPULAR RECIPES</h2>
           <h3>SEE ALL</h3>
