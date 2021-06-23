@@ -7,7 +7,7 @@ const OurMenu = () => {
     
       <div className="high-margin-menu" id="section-menu">
         
-        <div className='title'>
+        <div className='title-menu'>
             <div className='line'>
               <h2>OUR MENU</h2>
             </div>

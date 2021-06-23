@@ -5,11 +5,11 @@
 }
 
 // wraps both titel and subtitle h1 and h4
-.title { 
+.title-menu { 
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  padding-top: 50px;
+  align-items: center;
+  margin: 0;
 
   h2  {
     font-size: 67px;

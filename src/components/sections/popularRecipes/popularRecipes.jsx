@@ -6,15 +6,16 @@ const PopularRecipes = ({ id }) => {
   return (
     <div className="high-margin-recipes" id="section-recipes">
       
-      <div className="title-recipes">
+      <div className="title">
         <div className="title-left">
-          <h2>POPULAR RECIPES</h2>
-          <h3>SEE ALL</h3>
+          <h2>POPULAR</h2> 
+          <h3>RECIPES</h3>
+          <h4>SEE ALL</h4>
         </div>
 
         <div className="title-right">
-          <h2>DO YOU WANT TO SHARE YOUR OWN RECIPE?</h2>
-          <h3>SEE ALL</h3>
+          <p>DO YOU WANT TO SHARE YOUR OWN RECIPE?</p>
+          <h4>SEND IT NOW</h4>
         </div>
       </div>
         
@@ -80,19 +81,7 @@ const PopularRecipes = ({ id }) => {
           </div> 
           <span>USER FULL NAME</span>
         </div>
-
-        <div className="card">
-          <div className="inner">
-            <img src={process.env.PUBLIC_URL + '/images/feta2.jpg'} alt="feta2" />
-              <div className="text">
-                <article>DIFFICULTY</article>
-                <h3>FETA AND PEACH COUSCOUS</h3>
-                <p>Grab just four ingredients to make this easy, light lunch and enjoy a taste of summer. The combination of peaches, feta...</p>
-              </div>
-          </div> 
-          <span>USER FULL NAME</span>
-        </div>
-
+        
       </div>
     
     </div>
