@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import Slider from "react-slick";
 import '../../../../node_modules/slick-carousel/slick/slick.css';
 import '../../../../node_modules/slick-carousel/slick/slick-theme.css';
@@ -12,8 +12,8 @@ const PopularRecipes = () => {
     dots: true,
     infinite: true,
     centerMode: true,
-    slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToShow: 2,
+    slidesToScroll: 3,
     variableWidth: true
   };
 
