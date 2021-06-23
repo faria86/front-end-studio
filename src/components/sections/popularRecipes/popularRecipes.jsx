@@ -33,10 +33,14 @@ const PopularRecipes = () => {
       </div>
         
 
-      <div className="scrolling-wrapper" style={{ maxWidth: 1200 }}>
+      <div className="scrolling-wrapper">
         <Slider {...settings}>
 
           <div className="card" style={{ width: 371 }}>
+            <div className='servings'>
+              <h3 className='big'>4</h3>
+              <h3 className='big'>SERVINGS</h3>
+            </div>
             <div className="inner">
               <img src={process.env.PUBLIC_URL + '/images/toast.jpg'} alt="toast" />
               <div className="text">
@@ -49,6 +53,10 @@ const PopularRecipes = () => {
           </div>
 
           <div className="card" style={{ width: 250 }}>
+            <div className='servings'>
+                <h3 className='small'>2</h3>
+                <h3 className='small'>SERVINGS</h3>
+            </div>
             <div className="inner">
               <img src={process.env.PUBLIC_URL + '/images/pineapple.jpg'} alt="pine" />
               <div className="text">
@@ -61,6 +69,10 @@ const PopularRecipes = () => {
           </div>
 
           <div className="card" style={{ width: 242 }}>
+            <div className='servings'>
+              <h3 className='small'>2</h3>
+              <h3 className='small'>SERVINGS</h3>
+            </div>
             <div className="inner">
               <img src={process.env.PUBLIC_URL + '/images/cheese.jpg'} alt="cheese" />
               <div className="text">
@@ -73,6 +85,10 @@ const PopularRecipes = () => {
           </div>
 
           <div className="card" style={{ width: 240 }}>
+            <div className='servings'>
+              <h3 className='small'>8</h3>
+              <h3 className='small'>SERVINGS</h3>
+            </div>
             <div className="inner">
               <img src={process.env.PUBLIC_URL + '/images/feta1.jpg'} alt="feta1"/>
               <div className="text">
@@ -84,8 +100,12 @@ const PopularRecipes = () => {
             <span>USER FULL NAME</span>
           </div>
 
-          <div className="card">
-            <div className="inner" style={{ width: 240 }}>
+          <div className="card" style={{ width: 240}}>
+            <div className='servings'>
+              <h3 className='small'>8</h3>
+              <h3 className='small'>SERVINGS</h3>
+            </div>
+            <div className="inner" >
               <img src={process.env.PUBLIC_URL + '/images/feta2.jpg'} alt="feta2" />
                 <div className="text">
                   <article>DIFFICULTY</article>
