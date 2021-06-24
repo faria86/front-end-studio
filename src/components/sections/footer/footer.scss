@@ -1,0 +1,22 @@
+.footer-wrapper {
+    display: flex;
+    background-color: black;
+}
+
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 55%;
+    justify-content: space-between;
+    margin: 35px 0 0 25px;
+}
+.single-section {
+    flex: 0 0 150px;
+
+    h4 {
+        color: #FFDAC9;
+    }
+}
+.logo {
+    
+}

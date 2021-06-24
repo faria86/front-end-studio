@@ -37,10 +37,12 @@ const PopularRecipes = () => {
         <Slider {...settings}>
 
           <div className="card" style={{ width: 371 }}>
-            <div className='servings'>
+            <div className='servings-big'>
               <h3 className='big'>4</h3>
               <h3 className='big'>SERVINGS</h3>
             </div>
+            <div className='pink-box-toast'></div>
+            <div className="right-arrow"></div>
             <div className="inner">
               <img src={process.env.PUBLIC_URL + '/images/toast.jpg'} alt="toast" />
               <div className="text">
@@ -53,10 +55,11 @@ const PopularRecipes = () => {
           </div>
 
           <div className="card" style={{ width: 250 }}>
-            <div className='servings'>
+            <div className='servings-small'>
                 <h3 className='small'>2</h3>
                 <h3 className='small'>SERVINGS</h3>
             </div>
+            <div className='pink-box-pine'></div>
             <div className="inner">
               <img src={process.env.PUBLIC_URL + '/images/pineapple.jpg'} alt="pine" />
               <div className="text">
@@ -68,11 +71,12 @@ const PopularRecipes = () => {
             <span>USER FULL NAME</span>
           </div>
 
-          <div className="card" style={{ width: 242 }}>
-            <div className='servings'>
+          <div className="card" style={{ width: 242, marginTop: 100 }}>
+            <div className='servings-small'>
               <h3 className='small'>2</h3>
               <h3 className='small'>SERVINGS</h3>
             </div>
+            <div className='pink-box-spinach'></div>
             <div className="inner">
               <img src={process.env.PUBLIC_URL + '/images/cheese.jpg'} alt="cheese" />
               <div className="text">
@@ -85,10 +89,11 @@ const PopularRecipes = () => {
           </div>
 
           <div className="card" style={{ width: 240 }}>
-            <div className='servings'>
+            <div className='servings-small'>
               <h3 className='small'>8</h3>
               <h3 className='small'>SERVINGS</h3>
             </div>
+            <div className='pink-box-feta'></div>
             <div className="inner">
               <img src={process.env.PUBLIC_URL + '/images/feta1.jpg'} alt="feta1"/>
               <div className="text">
@@ -101,10 +106,11 @@ const PopularRecipes = () => {
           </div>
 
           <div className="card" style={{ width: 240}}>
-            <div className='servings'>
+            <div className='servings-small'>
               <h3 className='small'>8</h3>
               <h3 className='small'>SERVINGS</h3>
             </div>
+            <div className='pink-box-feta'></div>
             <div className="inner" >
               <img src={process.env.PUBLIC_URL + '/images/feta2.jpg'} alt="feta2" />
                 <div className="text">
