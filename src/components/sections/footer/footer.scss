@@ -1,6 +1,7 @@
 .footer-wrapper {
     display: flex;
     background-color: black;
+    height: 300px;
 }
 
 .sections {
@@ -18,5 +19,20 @@
     }
 }
 .logo {
-    
+    display: flex;
+    width: 30%;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 35px;
+
+    h2 {
+        font-size: 30px;
+        margin-bottom: 0;
+        color: white;
+    }
+
+    h2:last-child {
+        font-size: 45px;
+        margin: -3px;
+    }
 }

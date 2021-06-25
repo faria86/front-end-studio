@@ -74,6 +74,15 @@
         flex-direction: column;
         margin-right: 20px;
     }
+
+    .form-field, .select-field {
+        border-bottom: 2px solid gray;
+        padding: 8px;
+    }
+
+    .select-field {
+
+    }
 }
 
 .button-send {

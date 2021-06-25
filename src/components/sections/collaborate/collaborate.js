@@ -17,25 +17,25 @@ const collaborate = () => {
             <form className='form'>
                 <div className='form-left'>
                     <label>NAME</label>
-                    <input type='text' placeholder='Name'></input>
+                    <input type='text' className='form-field' placeholder='Name'></input>
 
                     <label>PHONE</label>
-                    <input type='text' placeholder='Phone'></input>
+                    <input type='text' className='form-field' placeholder='Phone'></input>
 
                     <label>EXPERIENCE</label>
-                    <select id="experience" name="experience">
+                    <select id="experience" className='select-field' name="experience">
                         <option value="some-value">Select</option>
                     </select>
                 </div>
                 <div className='form-right'>
                     <label>SURNAME</label>
-                    <input type='text' placeholder='Surname'></input>
+                    <input type='text' className='form-field' placeholder='Surname'></input>
 
                     <label>EMAIL ADDRESS</label>
-                    <input type='email' placeholder='Email'></input>
+                    <input type='email' className='form-field' placeholder='Email'></input>
 
                     <label>WHERE DID YOU HEAR ABOUT US?</label>
-                    <select id="social" name="social">
+                    <select id="social" className='select-field' name="social">
                         <option value="some-value">Select</option>
                     </select>
                     <button className='button-send'>SEND</button>

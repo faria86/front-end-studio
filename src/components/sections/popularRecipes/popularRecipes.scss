@@ -1,5 +1,5 @@
 .title {
-    margin-left: 90px;
+    margin: 30px 0 -15px 90px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
@@ -8,11 +8,14 @@
 .title-left {
     text-align: left;
     margin: 35px 0 0 50px;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
 
     h2 {
         font-size: 35px;
         text-decoration: none;
-        margin-bottom: -10px;
+        margin: 0 0 -8px;
     }
 
     h3 {
@@ -31,9 +34,11 @@
 }
 
 .title-right {
-    margin-right: 140px;
-    text-align: right;
-    margin-top: 115px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 50px 36px 0 0;
+    padding: 35px 25px;
 
 
     p {
@@ -219,6 +224,11 @@
     p {
         color: #767676;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    span {
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
