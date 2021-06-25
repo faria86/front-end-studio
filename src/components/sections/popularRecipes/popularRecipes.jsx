@@ -10,7 +10,8 @@ const PopularRecipes = () => {
   const settings = {
     className: "slider variable-width",
     dots: true,
-    infinite: true,
+    infinite: false,
+    initialSlide: 1,
     centerMode: true,
     slidesToShow: 2,
     slidesToScroll: 3,
@@ -20,7 +21,7 @@ const PopularRecipes = () => {
   return (
     <div className="high-margin-recipes" id="section-recipes">
       
-      <div className="title">
+      <div className="title scrolling-wrapper">
         <div className="title-left">
           <h2>POPULAR</h2> 
           <h3>RECIPES</h3>
@@ -71,7 +72,7 @@ const PopularRecipes = () => {
             <span>USER FULL NAME</span>
           </div>
 
-          <div className="card" style={{ width: 242, marginTop: 100 }}>
+          <div className="card card-with-margin" style={{ width: 242 }}>
             <div className='servings-small'>
               <h3 className='small'>2</h3>
               <h3 className='small'>SERVINGS</h3>

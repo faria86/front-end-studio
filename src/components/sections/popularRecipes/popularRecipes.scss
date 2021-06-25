@@ -1,5 +1,4 @@
 .title {
-    margin: 30px 0 -15px 90px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
@@ -7,7 +6,7 @@
 
 .title-left {
     text-align: left;
-    margin: 35px 0 0 50px;
+    margin: 35px 0 0 20px;
     display: flex;
     width: 50%;
     flex-direction: column;
@@ -37,8 +36,7 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    margin: 50px 36px 0 0;
-    padding: 35px 25px;
+    margin-top: 80px;
 
 
     p {
@@ -54,12 +52,11 @@
         text-align: right;
 
     }
-
 }
 
 .scrolling-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1080px;
+    margin: 30px auto;
 }
 
 .card {
@@ -68,6 +65,10 @@
     display: inline-block;
     padding: 0px 20px;
     box-sizing: border-box;
+
+    &.card-with-margin {
+        margin-top: 100px;
+    }
 
     .pink-box-toast {
         position: absolute;
@@ -230,6 +231,10 @@
         display: flex;
         justify-content: flex-end;
     }
+}
+
+.slick-list{
+    padding: 0 !important;
 }
 
 // .card:nth-of-type(3n) {
