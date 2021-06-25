@@ -13,8 +13,8 @@ const PopularRecipes = () => {
     infinite: false,
     initialSlide: 1,
     centerMode: true,
-    slidesToShow: 2,
-    slidesToScroll: 3,
+    slidesToShow: 3,
+    slidesToScroll: 2,
     variableWidth: true
   };
 
