@@ -41,7 +41,7 @@ const footer = () => {
                 <p>Subsection</p>
             </div>
         </div>
-        <div className='logo'>
+        <div className='logo-footer'>
             <h2>This is the</h2>
             <h2>LOGO</h2>
         </div>
