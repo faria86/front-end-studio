@@ -2,7 +2,6 @@ import React from 'react';
 import './ourMenu.scss';
 
 const OurMenu = () => {
-
   return (
     
       <div className="high-margin-menu" id="section-menu">
