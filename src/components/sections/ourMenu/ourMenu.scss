@@ -1,7 +1,7 @@
 .high-margin-menu {
   background-color: #F5F5F5;
   margin: 0;
-  height: 100%
+  height: 900px;
 }
 
 // wraps both titel and subtitle h1 and h4
@@ -32,11 +32,11 @@
 
 // wraps the 4 columns and their children
 .col-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0 80px 0 80px;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+  
   h2 {
     font-size: 67px;
     text-align: left;
@@ -63,15 +63,29 @@
   position: relative;
   z-index: 1;
   background: #F5F5F5
-
 }
+
+.col:first-child h2 {
+  transform: translateX(50px);
+}
+
+.col:nth-child(1) {
+  z-index: 5
+}
+
+.col:nth-child(2) {
+  z-index: 4;
+  transform: translateY(80px);
+} 
+.col:nth-child(3) { 
+  z-index: 3;
+  transform: translateY(35px);
+}
+
 .col:last-child {
   border-right: none;
+  transform: translateY(0px);
 }
-
-.col:nth-child(1){z-index: 5}
-.col:nth-child(2){z-index: 4}
-.col:nth-child(3){z-index: 3}
 
 .col, .dish {
   h4 {
