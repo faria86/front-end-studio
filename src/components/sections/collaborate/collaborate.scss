@@ -1,8 +1,14 @@
 .collab-wrapper {
     background-color: #FFDAC9;
     margin-top: 60px;
-    display: flex;
     height: 450px;
+}
+
+.center-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+
 }
 
 .title-description {
@@ -10,7 +16,7 @@
     flex: 2;
     padding: 50px 0;
     text-align: left;
-    margin: 0px 150px 0 95px;
+    margin: 0px 30px 0 95px;
 
     h2 {
         margin: 26px 0 -7px 6px;
