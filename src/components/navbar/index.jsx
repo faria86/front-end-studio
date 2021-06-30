@@ -60,17 +60,6 @@ export default class Navbar extends Component {
                 RECIPES
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="user-list"
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                USERS
-              </Link>
-            </li>
           </ul>
         </div>
 

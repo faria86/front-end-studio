@@ -1,42 +1,65 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './ourMenu.scss';
 
 const OurMenu = () => {
+  const ref = useRef();
+  const [scrollPosition, setScrollPosition] = useState('');
+
+  const handleScroll = () => {
+    const posY = ref.current.getBoundingClientRect().top;
+    const offset = window.pageYOffset - posY;
+    setScrollPosition(offset)
+
+    console.log(offset);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+
   return (
     
       <div className="high-margin-menu" id="section-menu">
+        <div className='borders'>
+          <div className='border'></div>
+          <div className='border'></div>
+          <div className='border'></div>
+          <div className='border'></div>
+        </div>
         
         <div className='title-menu'>
-            <div className='line'>
-              <h2>OUR MENU</h2>
-            </div>
+            <h2>OUR MENU</h2>
             <h4>KNOW MORE</h4>
         </div>
         
-        <div className="col-wrapper">
+        <div className="col-wrapper" ref={ref}>
           
-          <div className="col">
-            <h2>STARTERS</h2>
-            <div className="starter">
-              <div className='dish'>
-                <article>QUINOA CROQUETTAS</article>
-                <p> Quinoa and chedar croquetas with aji rocotto & pineapple salsa (v)</p>
-                <h4>£4.95</h4>
+          <div className="col" style = {{transform: `translateY(-${scrollPosition}px)`, marginTop: 1059 }}>
+              <h2>STARTERS</h2>
+              <div className="starter">
+                <div className='dish'>
+                  <article>QUINOA CROQUETTAS</article>
+                  <p> Quinoa and chedar croquetas with aji rocotto & pineapple salsa (v)</p>
+                  <h4>£4.95</h4>
+                </div>
+                <div className='dish'>
+                  <article>CHIFA CHICHARRONES</article>
+                  <p>Slow cooked, crispy pork belly with sweet soy sauce</p>
+                  <h4>£6.95</h4>
+                </div>
+                <div className='dish'>
+                  <article>CALAMARES</article>
+                  <p>Crispy baby squid with pickled jalapeño miso salsa</p>
+                  <h4>£6.95</h4>
+                </div>
               </div>
-              <div className='dish'>
-                <article>CHIFA CHICHARRONES</article>
-                <p>Slow cooked, crispy pork belly with sweet soy sauce</p>
-                <h4>£6.95</h4>
-              </div>
-              <div className='dish'>
-                <article>CALAMARES</article>
-                <p>Crispy baby squid with pickled jalapeño miso salsa</p>
-                <h4>£6.95</h4>
-              </div>
-            </div>
           </div>
 
-          <div className="col">
+          <div className="col" style = {{transform: `translateY(${scrollPosition}px)`, marginTop: -1109 }}>
             <h2>MAIN COURSES</h2>
             <div className="main">
               <div className='dish'>
@@ -52,7 +75,7 @@ const OurMenu = () => {
             </div>
           </div>
         
-          <div className="col">
+          <div className="col" style = {{transform: `translateY(-${scrollPosition}px)`, marginTop: 1120 }}>
             <h2>SIDES</h2>
             <div className="side">
               <div className='dish'>
@@ -68,7 +91,7 @@ const OurMenu = () => {
             </div>
           </div>
 
-          <div className="col">
+          <div className="col" style = {{transform: `translateY(${scrollPosition}px)`, marginTop: -1118 }}>
             <h2>DESSERTS</h2>
             <div className="dessert">
               <div className='dish'>
